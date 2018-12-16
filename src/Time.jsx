@@ -7,7 +7,6 @@ const Select = styled.select`
 `
 
 export default ({t, timeChange, slots}) => { 
-	console.log('Time');
 
 	const options = slots.map((time, index) => <option key={index} value={time.key}>{time.value}</option>)
 

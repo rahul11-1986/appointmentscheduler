@@ -18,7 +18,6 @@ const ParagraphList = styled.p`
 `
 
 export default ({schedules, click, hideCancelButton}) => {
-	console.log('List');
 
 	const list = schedules.map((schedule,index) => { 
 		return (

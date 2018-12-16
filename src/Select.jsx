@@ -11,7 +11,6 @@ export default class Select extends PureComponent {
 
 	render() {
 		const {list, selectedValue, changeHandler, month} = this.props
-		console.log(month ? 'Month' : 'Year');
 
 		const options = list.map((item, index) => <option key={index} value={ month ? index : item.value}>{item}</option>)
 

@@ -116,7 +116,6 @@ export default class Calender extends Component {
 	}
 
 	componentDidMount() {
-		console.log('componentDidMount');
 		let currentdate = new Date()
 		
 		let setState = {
@@ -158,9 +157,7 @@ export default class Calender extends Component {
 		})
 	}
 
-	handleMonthChange = (e) => {
-		console.log('handleMonthChange');
-				
+	handleMonthChange = (e) => {			
 		let setState = {
 			date :  1,
 			month : parseInt(e.target.value)
@@ -170,8 +167,6 @@ export default class Calender extends Component {
 	}
 
 	handleYearChange = (e) => {
-		console.log('handleYearChange');
-
 		this.fetchSchedules({
 			date :  1,
 			year : e.target.value
@@ -179,14 +174,12 @@ export default class Calender extends Component {
 	}
 
 	handleTimeChange = (e) => {
-		console.log('handleTimeChange');
 		this.setState({
 			time : e.target.value
 		})
 	}
 
 	handleSubmit = (e) => {
-		console.log('handleSubmit');
 		e.preventDefault()
 		const {time, date, month, year} = this.state;
 
@@ -208,12 +201,10 @@ export default class Calender extends Component {
 	}
 
 	handleDateSelect = (e) => {
-		console.log('handleDateSelect');
 		this.fetchSchedules({date: parseInt(e.target.id) })
 	}
 
 	handleAdd = () => {
-		console.log('handleAdd');
 		const slots = FetchAppointments(this.state).map(x => x.id.slice(0,1)) 
 
 		let sortedList = Slots.filter(z => !slots.includes(z.key)).sort((x,y)=> x.key > y.key ? 1 : -1)
@@ -226,7 +217,6 @@ export default class Calender extends Component {
 	}
 
 	handleCancel = (e) => {
-		console.log('handleCancel');
 		let {id} = e.target
 		const { schedules } = this.state;
 		let list = schedules.filter(x => x.id !== id)
@@ -235,7 +225,6 @@ export default class Calender extends Component {
 	}
 
 	handleClose = () => {
-		console.log('close');
 		this.setState({
 			add: false
 		})
@@ -284,7 +273,6 @@ export default class Calender extends Component {
 }
 
 function CalculateDays(state, handleDateSelect) {
-	console.log('date');
 	let {date, days, month, year, schedules} = state
 	
 	const day = Days.map(day => <DateItem key={day}><Item disabled header>{day}</Item></DateItem>)
