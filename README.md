@@ -11,3 +11,4 @@
 * Flex
 * LocalStorage
 * React-testing-library
+* Jest
