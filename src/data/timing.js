@@ -6,7 +6,8 @@ const Time = [
 	{
 		key : '2',
 		value: '09:30 AM - 10:00 AM' 
-	},{
+	},
+	{
 		key : '3',
 		value: '10:00 AM - 10:30 AM' 
 	},

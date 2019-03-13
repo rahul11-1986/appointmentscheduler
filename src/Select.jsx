@@ -15,7 +15,7 @@ export default class Select extends PureComponent {
 		const options = list.map((item, index) => <option key={index} value={ month ? index : item.value}>{item}</option>)
 
 		return (
-			<DropDownList month={month} value={selectedValue} onChange={changeHandler}>
+			<DropDownList data-testid={month ? 'drpMonth' : 'drpYear' } month={month} value={selectedValue} onChange={changeHandler}>
 				{options}
 			</DropDownList>
 		)

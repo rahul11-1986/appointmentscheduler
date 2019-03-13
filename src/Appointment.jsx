@@ -22,7 +22,7 @@ export default ({schedules, click, hideCancelButton}) => {
 	const list = schedules.map((schedule,index) => { 
 		return (
 			<Fragment key={index}>
-				<ParagraphList>{schedule.reason}</ParagraphList>
+				<ParagraphList data-testid="reason">{schedule.reason}</ParagraphList>
 				<ParagraphList time>{schedule.time}</ParagraphList>
 				{!hideCancelButton ? <span id={schedule.id} onClick={click} role="img" aria-label="cancel">❌</span> : <span/>}
 			</Fragment>

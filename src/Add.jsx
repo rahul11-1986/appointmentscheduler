@@ -15,7 +15,7 @@ const HeaderParagragh = styled.p`
 	justify-content: space-between;
 
 	span {
-		font-size: ${props => props.add ? '0.8' : '1.2'}em;
+		font-size: 0.8em;
 		color: #1e94ff;
 	}
 `
@@ -28,11 +28,11 @@ export default class AddForm extends React.Component {
 
 		return (
 			<Fragment>
-				<HeaderParagragh add>
+				<HeaderParagragh>
 					<Header>Book Appointment</Header>
-					<span onClick={onClose} role="img" aria-label="cancel">❌</span>
+					<span data-testid="close" onClick={onClose} role="img" aria-label="cancel">❌</span>
 				</HeaderParagragh>
-				<div>
+				<div data-testid="AddForm">
 					<label>Time</label>
 					<Time t={time} slots={slot} timeChange={onChange} />
 					<label>Details</label>

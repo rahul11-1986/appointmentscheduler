@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`load 1`] = `
+.c2 {
+  font: 25px 'Times New Roman';
+  -webkit-flex: 0.3;
+  -ms-flex: 0.3;
+  flex: 0.3;
+}
+
+.c1 {
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 20px 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c0 span {
+  font-size: 0.8em;
+  color: #1e94ff;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    <b
+      class="c1"
+    >
+      Book Appointment
+    </b>
+    <span
+      aria-label="cancel"
+      data-testid="close"
+      role="img"
+    >
+      ❌
+    </span>
+  </p>
+  <div
+    data-testid="AddForm"
+  >
+    <label>
+      Time
+    </label>
+    <select
+      class="c2"
+      data-testid="drpTime"
+    >
+      <option
+        value="1"
+      >
+        09:00 AM - 09:30 AM
+      </option>
+      <option
+        value="2"
+      >
+        09:30 AM - 10:00 AM
+      </option>
+      <option
+        value="3"
+      >
+        10:00 AM - 10:30 AM
+      </option>
+      <option
+        value="4"
+      >
+        10:30 AM - 11:00 AM
+      </option>
+    </select>
+    <label>
+      Details
+    </label>
+    <input
+      maxlength="20"
+      name="item"
+      placeholder="Enter reason"
+      required=""
+      type="text"
+    />
+    <input
+      type="submit"
+      value="+ Add Item"
+    />
+  </div>
+</div>
+`;

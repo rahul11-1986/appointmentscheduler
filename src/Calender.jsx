@@ -97,7 +97,7 @@ const HeaderParagragh = styled.p`
 	justify-content: space-between;
 
 	span {
-		font-size: ${props => props.add ? '0.8' : '1.2'}em;
+		font-size: 1.2em;
 		color: #1e94ff;
 	}
 `
@@ -248,7 +248,7 @@ export default class Calender extends Component {
 					<DateGrid>
 						{DaysOfMonth}
 					</DateGrid>
-					<Form add={add} onSubmit={this.handleSubmit}>
+					<Form data-testid="form" add={add} onSubmit={this.handleSubmit}>
 						{
 							add ?
 							( 
@@ -259,7 +259,7 @@ export default class Calender extends Component {
 								<Fragment>
 									<HeaderParagragh>
 										<span>{selectedDate}</span>
-										{!old && list.length !== Slots.length && <input type="button" value="➕" onClick={this.handleAdd} />}
+										{!old && list.length !== Slots.length && <input data-testid="btnAdd" type="button" value="➕" onClick={this.handleAdd} />}
 									</HeaderParagragh>
 									<List schedules={list} click={this.handleCancel} hideCancelButton={old}/>
 								</Fragment> 
@@ -277,8 +277,7 @@ function CalculateDays(state, handleDateSelect) {
 	
 	const day = Days.map(day => <DateItem key={day}><Item disabled header>{day}</Item></DateItem>)
 
-	let newDate = new Date()
-	newDate.setFullYear(year, month, 1);
+	let newDate = SetDate(year, month, 1)
 
 	let startMonth = 7 - newDate.getDay()
 	
