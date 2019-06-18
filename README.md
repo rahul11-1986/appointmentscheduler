@@ -6,9 +6,9 @@
 
 ### Created a react app using the below mentioned tools:
 
-* Styled-Components
-* CSS Grid
-* Flex
-* LocalStorage
-* React-testing-library
 * Jest
+* Flex
+* CSS Grid
+* LocalStorage
+* Styled-Components
+* React-testing-library
